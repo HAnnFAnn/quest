@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "text": "Ты потерял память.\nПринять вызов НЛО?",
+    "imageLink": "image/start-image.png",
+    "answers":[
+      {
+        "id": 1,
+        "text": "Принять вызов",
+        "nextQuestionId": 2
+      },
+      {
+        "id": 2,
+        "text": "Отклонить вызов",
+        "nextQuestionId": 3
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Ты принял вызов.\nПоднимаешься на мостик к капитану?",
+    "imageLink": "...image.jpg",
+    "answers":[
+      {
+        "id": 3,
+        "text": "Подняться на мостик",
+        "nextQuestionId": 5
+      },
+      {
+        "id": 4,
+        "text": "Отказаться подниматься на мостик",
+        "nextQuestionId": 4
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Ты отклонил вызов. Поражение.",
+    "imageLink": "image/start-image.png",
+    "answers":[
+      {
+        "id": 5,
+        "text": "Начать сначала",
+        "nextQuestionId": 1
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Ты не пошел на переговоры.Поражение",
+    "imageLink": "image/start-image.png",
+    "answers":[
+      {
+        "id": 1,
+        "text": "Начать сначала",
+        "nextQuestionId": 1
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "Ты поднялся на мостик.Победа.",
+    "imageLink": "image/start-image.png",
+    "answers":[
+      {
+        "id": 1,
+        "text": "Начать сначала",
+        "nextQuestionId": 1
+      }
+    ]
+  }
+]
