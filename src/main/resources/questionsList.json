@@ -19,7 +19,7 @@
   {
     "id": 2,
     "text": "Ты принял вызов.\nПоднимаешься на мостик к капитану?",
-    "imageLink": "...image.jpg",
+    "imageLink": "image/start-image.png",
     "answers":[
       {
         "id": 3,
@@ -39,7 +39,7 @@
     "imageLink": "image/start-image.png",
     "answers":[
       {
-        "id": 5,
+        "id": 10,
         "text": "Начать сначала",
         "nextQuestionId": 1
       }
@@ -47,11 +47,11 @@
   },
   {
     "id": 4,
-    "text": "Ты не пошел на переговоры.Поражение",
+    "text": "Ты не пошел на переговоры. Поражение",
     "imageLink": "image/start-image.png",
     "answers":[
       {
-        "id": 1,
+        "id": 10,
         "text": "Начать сначала",
         "nextQuestionId": 1
       }
@@ -63,7 +63,7 @@
     "imageLink": "image/start-image.png",
     "answers":[
       {
-        "id": 1,
+        "id": 10,
         "text": "Начать сначала",
         "nextQuestionId": 1
       }
