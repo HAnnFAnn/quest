@@ -6,15 +6,38 @@ import ru.javarush.filippova.quest.repository.QuestionRepository;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.Objects;
 
 public class QuestionRepositoryImpl implements QuestionRepository {
-    File file = new File("/src/main/resources/questionsList.json");
-    //File file = new File("/Users/hann/JavaProj/ru.javarush.filippova.quest/src/main/resources/questionsList.json");
+
+    public static File getResourceFile(String relativePath) {
+        File file = null;
+        URL location = QuestionRepositoryImpl.class.getProtectionDomain().getCodeSource().getLocation();
+        String codeLocation = location.toString();
+        try {
+            if (codeLocation.endsWith(".jar")) {
+                //Call from jar
+                Path path = Paths.get(location.toURI()).resolve("../classes/" + relativePath).normalize();
+                file = path.toFile();
+            } else {
+                //Call from IDE
+                file = new File(QuestionRepositoryImpl.class.getClassLoader().getResource(relativePath).getFile());
+            }
+        } catch (URISyntaxException ex) {
+            ex.printStackTrace();
+        }
+        return file;
+    }
+
     @Override
     public List<Question> getAllQuestions() {
 
+        File file = getResourceFile("questionsList.json");
         List<Question> questions = null;
         ObjectMapper objectMapper = new ObjectMapper();
         try {
@@ -29,9 +52,9 @@ public class QuestionRepositoryImpl implements QuestionRepository {
     @Override
     public Question getQuestionById(Long id) {
         return getAllQuestions()
-                    .stream()
-                    .filter(it -> Objects.equals(it.getId(), id))
-                    .findFirst()
-                    .orElseThrow(RuntimeException::new);
+                .stream()
+                .filter(it -> Objects.equals(it.getId(), id))
+                .findFirst()
+                .orElseThrow(RuntimeException::new);
     }
 }
