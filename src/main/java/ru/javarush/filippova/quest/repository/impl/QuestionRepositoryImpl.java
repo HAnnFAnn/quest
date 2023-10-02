@@ -37,7 +37,7 @@ public class QuestionRepositoryImpl implements QuestionRepository {
     @Override
     public List<Question> getAllQuestions() {
 
-        File file = getResourceFile("questionsList.json");
+        File file = getResourceFile("questionsListNew.json");
         List<Question> questions = null;
         ObjectMapper objectMapper = new ObjectMapper();
         try {
