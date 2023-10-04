@@ -9,12 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8be45a6-42a2-4cfb-ba7d-631f8e66ff82" name="Changes" comment="FEAT: Update quest's content">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/javarush/filippova/quest/repository/impl/QuestionRepositoryImplTest.java" afterDir="false" />
+    <list default="true" id="d8be45a6-42a2-4cfb-ba7d-631f8e66ff82" name="Changes" comment="FEAT: Add JUnit tests (in process)">
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/javarush/filippova/quest/controller/LogicServletTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/questionsListNew.json.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/questionsListNew.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/questionsListNew.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/javarush/filippova/quest/domain/entity/Answer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/javarush/filippova/quest/domain/entity/Answer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/javarush/filippova/quest/domain/entity/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/javarush/filippova/quest/domain/entity/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/javarush/filippova/quest/repository/impl/QuestionRepositoryImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/javarush/filippova/quest/repository/impl/QuestionRepositoryImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +67,7 @@
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "/Users/hann/JavaProj/ru.javarush.filippova.quest",
+    "last_opened_file_path": "/Users/hann/JavaProj/ru.javarush.filippova.quest/src/test/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -80,6 +82,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/main/webapp/image" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
@@ -98,10 +101,26 @@
       <recent name="ru.javarush" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="ru.javarush.filippova.quest.controller" />
       <recent name="ru.javarush.filippova.quest.repository.impl" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.QuestionRepositoryImplTest.getQuestionById">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.78">
+    <configuration name="QuestionRepositoryImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="quest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.javarush.filippova.quest.repository.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.javarush.filippova.quest.repository.impl" />
+      <option name="MAIN_CLASS_NAME" value="ru.javarush.filippova.quest.repository.impl.QuestionRepositoryImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="QuestionRepositoryImplTest.getQuestionById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="quest" />
       <extension name="coverage">
@@ -113,6 +132,38 @@
       <option name="PACKAGE_NAME" value="ru.javarush.filippova.quest.repository.impl" />
       <option name="MAIN_CLASS_NAME" value="ru.javarush.filippova.quest.repository.impl.QuestionRepositoryImplTest" />
       <option name="METHOD_NAME" value="getQuestionById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuestionRepositoryImplTest.returnQuestionWhenGetById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="quest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.javarush.filippova.quest.repository.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.javarush.filippova.quest.repository.impl" />
+      <option name="MAIN_CLASS_NAME" value="ru.javarush.filippova.quest.repository.impl.QuestionRepositoryImplTest" />
+      <option name="METHOD_NAME" value="returnQuestionWhenGetById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuestionRepositoryImplTest.testGetAllQuestions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="quest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.javarush.filippova.quest.repository.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.javarush.filippova.quest.repository.impl" />
+      <option name="MAIN_CLASS_NAME" value="ru.javarush.filippova.quest.repository.impl.QuestionRepositoryImplTest" />
+      <option name="METHOD_NAME" value="testGetAllQuestions" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -207,6 +258,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.QuestionRepositoryImplTest.returnQuestionWhenGetById" />
+        <item itemvalue="JUnit.QuestionRepositoryImplTest" />
+        <item itemvalue="JUnit.QuestionRepositoryImplTest.testGetAllQuestions" />
         <item itemvalue="JUnit.QuestionRepositoryImplTest.getQuestionById" />
       </list>
     </recent_temporary>
@@ -222,7 +276,7 @@
       <workItem from="1695323598849" duration="13851000" />
       <workItem from="1695488352440" duration="167000" />
       <workItem from="1695488525313" duration="4563000" />
-      <workItem from="1695498331031" duration="116151000" />
+      <workItem from="1695498331031" duration="131997000" />
     </task>
     <task id="LOCAL-00001" summary="Module_3 FINAL_Project.&#10;----first version----&#10;Filippova Anna">
       <option name="closed" value="true" />
@@ -256,7 +310,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696265479092</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="FEAT: Add JUnit tests (in process)">
+      <option name="closed" value="true" />
+      <created>1696282722402</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1696282722402</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,6 +339,7 @@
     <MESSAGE value="Module_3 FINAL_Project.&#10;----first version----&#10;Filippova Anna" />
     <MESSAGE value="FEAT: Первый релиз" />
     <MESSAGE value="FEAT: Update quest's content" />
-    <option name="LAST_COMMIT_MESSAGE" value="FEAT: Update quest's content" />
+    <MESSAGE value="FEAT: Add JUnit tests (in process)" />
+    <option name="LAST_COMMIT_MESSAGE" value="FEAT: Add JUnit tests (in process)" />
   </component>
 </project>
