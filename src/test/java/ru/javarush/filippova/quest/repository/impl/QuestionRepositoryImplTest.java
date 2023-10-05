@@ -22,7 +22,7 @@ class QuestionRepositoryImplTest {
     }
 
     @Test
-    public void testGetAllQuestions() {
+    public void returnNotNullQuestions() {
         List<Question> questions = questionRepository.getAllQuestions();
 
         assertNotNull(questions);
